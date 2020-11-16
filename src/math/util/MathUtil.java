@@ -37,3 +37,13 @@ public class MathUtil {
     }
     
 }
+//muốn kết luận hàm ổn thì phải nhìn bằng mắt kết quả chạy và so sánh với kì vọng
+//làm từng trường hợp chạy hàm - test case
+//ổn nhưng mất sức
+
+//Nâng cao: dùng xanh - đỏ để kết luận
+//nếu xanh -> mọi tình huống ổn
+// nếu  đỏ, 1 đỏ coi như hàm toang
+// xài thêm 1 framework, unit test tên chung
+//JUNIT, TESTING, ... là frammework cụ thể để test các hàm 1 cách hiệu quả
+// có thể tích hợp vào 1 quy trình làm phần mềm lớn hơn - CI/CT/CD/DEVOPS
