@@ -24,7 +24,7 @@ public class MathUtilityTest {
     }
     //cần test xem có ném về ngoại lệ hay không
     //nếu đúng là IllegalArgumentException trong tình huống -5! thì có màu xanh
-    @Test(expected = SQLException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void getFactorial_ThrowsException_IfInvalidArgument(){
         getFactorial(-5);
     }
