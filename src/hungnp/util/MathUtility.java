@@ -20,18 +20,30 @@ public class MathUtility {
     //21! lon, tràn kiểu long, chứa ko nổi
     //int:toi da 2.x ty
     //hàm giai thừa viết trong giới hạn đầu vào từ 0..20
+//    public static long getFactorial(int n){
+//        if(n<0 || n>20)
+//            throw new IllegalArgumentException("n must be between 0..20");
+//        if(n==0 || n==1)
+//            return 1;
+//        //ko xài else, có else trừ điểm
+//        long result = 1;
+//        //n=2 -> 20
+//        for (int i = 2; i <= n; i++) {
+//            result *=i;
+//        }
+//        return result;
+//    }
+    
+    // viết đệ quy
     public static long getFactorial(int n){
         if(n<0 || n>20)
             throw new IllegalArgumentException("n must be between 0..20");
         if(n==0 || n==1)
             return 1;
-        //ko xài else, có else trừ điểm
-        long result = 1;
-        //n=2 -> 20
-        for (int i = 2; i <= n; i++) {
-            result *=i;
-        }
-        return result;
+        return n*getFactorial(n-1);
     }
+    //Mình minh họa khái niệm refactoring - tối ưu code, chỉnh sửa lại code cho tốt hơn
+    // và minh họa khái niệm Regression test- test hồi quy, test lại những gì đã từng test
+    //để check xem code còn XANH như ngày xưa không sau khi đã sửa code
     
 }
